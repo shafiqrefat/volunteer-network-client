@@ -13,7 +13,7 @@ const AdminDashboard = () => {
 	// Get register users data and update volunteerList
 	useEffect(() => {
 		if (toggleView.showList) {
-			fetch("https://still-stream-80611.herokuapp.com/loadVolunteerList")
+			fetch("https://pacific-meadow-01781.herokuapp.com/loadVolunteerList")
 				.then((res) => res.json())
 				.then((data) => setVolunteerList(data));
 		}
@@ -23,7 +23,7 @@ const AdminDashboard = () => {
 	const handleDeleteEvent = (id) => {
 		if (window.confirm("Are you sure to delete this task permanently?")) {
 			console.log("delete clicked", id);
-			fetch(`https://still-stream-80611.herokuapp.com/admin/deleteTask/${id}`, {
+			fetch(`https://pacific-meadow-01781.herokuapp.com/admin/deleteTask/${id}`, {
 				method: "DELETE",
 			})
 				.then((res) => res.json())
