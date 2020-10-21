@@ -12,7 +12,7 @@ const Home = () => {
 	// If DB is empty then add fake data
 	const handleAddBaseData = () => {
 		console.log(volunteerTasks);
-		fetch("http://localhost:7000/addBaseData", {
+		fetch("https://pacific-meadow-01781.herokuapp.com/addBaseData", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -23,7 +23,7 @@ const Home = () => {
 
 	// Get data from DB and baseData
 	useEffect(() => {
-		fetch("http://localhost:7000/home")
+		fetch("https://pacific-meadow-01781.herokuapp.com/home")
 			.then((res) => res.json())
 			.then((data) => {
 				setBaseData(data);
